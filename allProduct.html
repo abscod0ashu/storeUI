@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All product</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body>
+       <!-- Navbar start-->
+       <div class="h-full w-full">
+        <!-- Code block starts --> 
+        <nav class="navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-full justify-between">
+            <div class="px-6 w-full flex flex-wrap items-center justify-between">
+              <div class="flex items-center sm:hidden">
+                <button
+                  class="navbar-toggler border-0 py-3 lg:hidden leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out mr-2"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContentY"
+                  aria-controls="navbarSupportedContentY"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    class="w-5"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                    ></path>
+                  </svg>
+                </button>
+                <a class="navbar-brand text-blue-600" href="#!">
+                  <svg class="w-5 h-5 ml-2 lg:ml-0 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor" d="M485.5 0L576 160H474.9L405.7 0h79.8zm-128 0l69.2 160H149.3L218.5 0h139zm-267 0h79.8l-69.2 160H0L90.5 0zM0 192h100.7l123 251.7c1.5 3.1-2.7 5.9-5 3.3L0 192zm148.2 0h279.6l-137 318.2c-1 2.4-4.5 2.4-5.5 0L148.2 192zm204.1 251.7l123-251.7H576L357.3 446.9c-2.3 2.7-6.5-.1-5-3.2z"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="navbar-collapse collapse grow items-center sm\:hidden md\:hidden" id="navbarSupportedContentY" >
+                <ul class="navbar-nav mr-auto lg:flex lg:flex-row">
+                  <li class="nav-item">
+                    <a href="./index.html" class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Vbazar</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">User</a>
+                  </li>
+                  <li class="nav-item mb-2 lg:mb-0">
+                    <a href="./allProduct.html"class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Products</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex items-center lg:ml-auto">
+                <a href="./login.html" class="inline-block px-6 py-2.5 mr-2 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light">Login</a>
+                <a href="./signup.html" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light">Sign up </a>
+              </div>
+            </div>
+          </nav>
+        <!-- Sidebar ends -->
+    
+      
+        <!-- Code block ends -->
+    </div>
+       <!-- Navbar end-->
+
+       <!-- show Product start -->
+   
+       <div class="px-4 py-12">
+        <div
+            class="lg:max-w-[1440px] md:max-w-[744px] max-w-[375px] mx-auto bg-white lg:px-10 md:px-6 px-4 md:py-12  py-9">
+           
+            <div class="lg:block md:hidden block">
+                <div class="lg:flex justify-center gap-8 mt-6">
+
+                    <div class="relative">
+                        <svg class="absolute top-4 right-4 cursor-pointer " width="36" height="36" viewBox="0 0 36 36"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18" cy="18" r="18" fill="#1E293B" />
+                            <rect width="20" height="20" transform="translate(8 8)" fill="#1E293B" />
+                            <path
+                                d="M11.125 14.875C10.9592 14.875 10.8003 14.9408 10.6831 15.0581C10.5658 15.1753 10.5 15.3342 10.5 15.5V23.9375C10.5 25.1187 11.5063 26.125 12.6875 26.125H23.3125C24.4937 26.125 25.5 25.1676 25.5 23.9863V15.5C25.5 15.3342 25.4342 15.1753 25.3169 15.0581C25.1997 14.9408 25.0408 14.875 24.875 14.875H11.125Z"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 14.875V13.625C14.25 12.6304 14.6451 11.6766 15.3483 10.9733C16.0516 10.2701 17.0054 9.875 18 9.875V9.875C18.9946 9.875 19.9484 10.2701 20.6517 10.9733C21.3549 11.6766 21.75 12.6304 21.75 13.625V14.875"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 16.75V17.375C14.25 18.3696 14.6451 19.3234 15.3483 20.0267C16.0516 20.7299 17.0054 21.125 18 21.125C18.9946 21.125 19.9484 20.7299 20.6517 20.0267C21.3549 19.3234 21.75 18.3696 21.75 17.375V16.75"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                        <div>
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%2018%20%282%29.png"
+                                alt="">
+                        </div>
+                        <div
+                            class="flex justify-between items-center bg-gradient-to-r from-[#000000]/50  to-[#000000]/30 py-2 px-3  ">
+                            <div>
+                                <p class="text-base font-normal  text-white">Iphone 13 Pro</p>
+                                <p class="text-base font-normal text-white font-medium">$1,050.00</p>
+                            </div>
+                            <div>
+                                <svg class="hover:fill-white cursor-pointer" id="main" width="32" height="32"
+                                    viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0581 5C18.0006 5 16.0006 9 16.0006 9C16.0006 9 14.0006 5 9.94314 5C6.64564 5 4.03439 7.75875 4.00064 11.0506C3.93189 17.8837 9.42126 22.7431 15.4381 26.8269C15.604 26.9397 15.8 27.0001 16.0006 27.0001C16.2013 27.0001 16.3973 26.9397 16.5631 26.8269C22.5794 22.7431 28.0688 17.8837 28.0006 11.0506C27.9669 7.75875 25.3556 5 22.0581 5Z"
+                                        stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative md:mt-0 mt-4">
+                        <svg class="absolute top-4 right-4 cursor-pointer" width="36" height="36" viewBox="0 0 36 36"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18" cy="18" r="18" fill="#1E293B" />
+                            <rect width="20" height="20" transform="translate(8 8)" fill="#1E293B" />
+                            <path
+                                d="M11.125 14.875C10.9592 14.875 10.8003 14.9408 10.6831 15.0581C10.5658 15.1753 10.5 15.3342 10.5 15.5V23.9375C10.5 25.1187 11.5063 26.125 12.6875 26.125H23.3125C24.4937 26.125 25.5 25.1676 25.5 23.9863V15.5C25.5 15.3342 25.4342 15.1753 25.3169 15.0581C25.1997 14.9408 25.0408 14.875 24.875 14.875H11.125Z"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 14.875V13.625C14.25 12.6304 14.6451 11.6766 15.3483 10.9733C16.0516 10.2701 17.0054 9.875 18 9.875V9.875C18.9946 9.875 19.9484 10.2701 20.6517 10.9733C21.3549 11.6766 21.75 12.6304 21.75 13.625V14.875"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 16.75V17.375C14.25 18.3696 14.6451 19.3234 15.3483 20.0267C16.0516 20.7299 17.0054 21.125 18 21.125C18.9946 21.125 19.9484 20.7299 20.6517 20.0267C21.3549 19.3234 21.75 18.3696 21.75 17.375V16.75"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                        <div>
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%2017.png" alt="">
+                        </div>
+                        <div
+                            class="flex justify-between items-center bg-gradient-to-r from-[#000000]/50  to-[#000000]/30 py-2 px-3  ">
+                            <div>
+                                <p class="text-base font-normal  text-white">Macbook</p>
+                                <p class="text-base font-normal text-white font-medium">$2,050.00 <span
+                                        class="line-through font-medium">$2,200.00</span> </p>
+                            </div>
+                            <div>
+                                <svg class="hover:fill-white cursor-pointer" width="32" height="32" viewBox="0 0 32 32"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0581 5C18.0006 5 16.0006 9 16.0006 9C16.0006 9 14.0006 5 9.94314 5C6.64564 5 4.03439 7.75875 4.00064 11.0506C3.93189 17.8837 9.42126 22.7431 15.4381 26.8269C15.604 26.9397 15.8 27.0001 16.0006 27.0001C16.2013 27.0001 16.3973 26.9397 16.5631 26.8269C22.5794 22.7431 28.0688 17.8837 28.0006 11.0506C27.9669 7.75875 25.3556 5 22.0581 5Z"
+                                        stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative md:mt-0 mt-4">
+                        <svg class="absolute top-4 right-4 cursor-pointer" width="36" height="36" viewBox="0 0 36 36"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18" cy="18" r="18" fill="#1E293B" />
+                            <rect width="20" height="20" transform="translate(8 8)" fill="#1E293B" />
+                            <path
+                                d="M11.125 14.875C10.9592 14.875 10.8003 14.9408 10.6831 15.0581C10.5658 15.1753 10.5 15.3342 10.5 15.5V23.9375C10.5 25.1187 11.5063 26.125 12.6875 26.125H23.3125C24.4937 26.125 25.5 25.1676 25.5 23.9863V15.5C25.5 15.3342 25.4342 15.1753 25.3169 15.0581C25.1997 14.9408 25.0408 14.875 24.875 14.875H11.125Z"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 14.875V13.625C14.25 12.6304 14.6451 11.6766 15.3483 10.9733C16.0516 10.2701 17.0054 9.875 18 9.875V9.875C18.9946 9.875 19.9484 10.2701 20.6517 10.9733C21.3549 11.6766 21.75 12.6304 21.75 13.625V14.875"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 16.75V17.375C14.25 18.3696 14.6451 19.3234 15.3483 20.0267C16.0516 20.7299 17.0054 21.125 18 21.125C18.9946 21.125 19.9484 20.7299 20.6517 20.0267C21.3549 19.3234 21.75 18.3696 21.75 17.375V16.75"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                        <div>
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%2016%20%282%29.png"
+                                alt="">
+                        </div>
+                        <div
+                            class="flex justify-between items-center bg-gradient-to-r from-[#000000]/50  to-[#000000]/30 py-2 px-3  ">
+                            <div>
+                                <p class="text-base font-normal  text-white">AirPods 3</p>
+                                <p class="text-base font-normal text-white font-medium">$230.00</p>
+                            </div>
+                            <div>
+                                <svg class="hover:fill-white cursor-pointer" width="32" height="32" viewBox="0 0 32 32"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0581 5C18.0006 5 16.0006 9 16.0006 9C16.0006 9 14.0006 5 9.94314 5C6.64564 5 4.03439 7.75875 4.00064 11.0506C3.93189 17.8837 9.42126 22.7431 15.4381 26.8269C15.604 26.9397 15.8 27.0001 16.0006 27.0001C16.2013 27.0001 16.3973 26.9397 16.5631 26.8269C22.5794 22.7431 28.0688 17.8837 28.0006 11.0506C27.9669 7.75875 25.3556 5 22.0581 5Z"
+                                        stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:block md:hidden block">
+                <div class="lg:flex justify-center gap-8 md:mt-8 mt-4">
+                    <div class="relative md:mt-0 mt-4">
+                        <svg class="absolute top-4 right-4 cursor-pointer" width="36" height="36" viewBox="0 0 36 36"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18" cy="18" r="18" fill="#1E293B" />
+                            <rect width="20" height="20" transform="translate(8 8)" fill="#1E293B" />
+                            <path
+                                d="M11.125 14.875C10.9592 14.875 10.8003 14.9408 10.6831 15.0581C10.5658 15.1753 10.5 15.3342 10.5 15.5V23.9375C10.5 25.1187 11.5063 26.125 12.6875 26.125H23.3125C24.4937 26.125 25.5 25.1676 25.5 23.9863V15.5C25.5 15.3342 25.4342 15.1753 25.3169 15.0581C25.1997 14.9408 25.0408 14.875 24.875 14.875H11.125Z"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 14.875V13.625C14.25 12.6304 14.6451 11.6766 15.3483 10.9733C16.0516 10.2701 17.0054 9.875 18 9.875V9.875C18.9946 9.875 19.9484 10.2701 20.6517 10.9733C21.3549 11.6766 21.75 12.6304 21.75 13.625V14.875"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 16.75V17.375C14.25 18.3696 14.6451 19.3234 15.3483 20.0267C16.0516 20.7299 17.0054 21.125 18 21.125C18.9946 21.125 19.9484 20.7299 20.6517 20.0267C21.3549 19.3234 21.75 18.3696 21.75 17.375V16.75"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                        <div>
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%2021.png" alt="">
+                        </div>
+                        <div
+                            class="flex justify-between items-center bg-gradient-to-r from-[#000000]/50  to-[#000000]/30 py-2 px-3  ">
+                            <div>
+                                <p class="text-base font-normal  text-white">Watch 6</p>
+                                <p class="text-base font-normal text-white font-medium">$300.00 <span
+                                        class="line-through font-medium">$350.00</span> </p>
+                            </div>
+                            <div>
+                                <svg class="hover:fill-white cursor-pointer" width="32" height="32" viewBox="0 0 32 32"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0581 5C18.0006 5 16.0006 9 16.0006 9C16.0006 9 14.0006 5 9.94314 5C6.64564 5 4.03439 7.75875 4.00064 11.0506C3.93189 17.8837 9.42126 22.7431 15.4381 26.8269C15.604 26.9397 15.8 27.0001 16.0006 27.0001C16.2013 27.0001 16.3973 26.9397 16.5631 26.8269C22.5794 22.7431 28.0688 17.8837 28.0006 11.0506C27.9669 7.75875 25.3556 5 22.0581 5Z"
+                                        stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative md:mt-0 mt-4">
+                        <svg class="absolute top-4 right-4 cursor-pointer" width="36" height="36" viewBox="0 0 36 36"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18" cy="18" r="18" fill="#1E293B" />
+                            <rect width="20" height="20" transform="translate(8 8)" fill="#1E293B" />
+                            <path
+                                d="M11.125 14.875C10.9592 14.875 10.8003 14.9408 10.6831 15.0581C10.5658 15.1753 10.5 15.3342 10.5 15.5V23.9375C10.5 25.1187 11.5063 26.125 12.6875 26.125H23.3125C24.4937 26.125 25.5 25.1676 25.5 23.9863V15.5C25.5 15.3342 25.4342 15.1753 25.3169 15.0581C25.1997 14.9408 25.0408 14.875 24.875 14.875H11.125Z"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 14.875V13.625C14.25 12.6304 14.6451 11.6766 15.3483 10.9733C16.0516 10.2701 17.0054 9.875 18 9.875V9.875C18.9946 9.875 19.9484 10.2701 20.6517 10.9733C21.3549 11.6766 21.75 12.6304 21.75 13.625V14.875"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 16.75V17.375C14.25 18.3696 14.6451 19.3234 15.3483 20.0267C16.0516 20.7299 17.0054 21.125 18 21.125C18.9946 21.125 19.9484 20.7299 20.6517 20.0267C21.3549 19.3234 21.75 18.3696 21.75 17.375V16.75"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                        <div>
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%2020%20%282%29.png"
+                                alt="">
+                        </div>
+                        <div
+                            class="flex justify-between items-center bg-gradient-to-r from-[#000000]/50  to-[#000000]/30 py-2 px-3  ">
+                            <div>
+                                <p class="text-base font-normal  text-white">Iphone X</p>
+                                <p class="text-base font-normal text-white font-medium">$750.00</p>
+                            </div>
+                            <div>
+                                <svg class="hover:fill-white cursor-pointer" width="32" height="32" viewBox="0 0 32 32"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0581 5C18.0006 5 16.0006 9 16.0006 9C16.0006 9 14.0006 5 9.94314 5C6.64564 5 4.03439 7.75875 4.00064 11.0506C3.93189 17.8837 9.42126 22.7431 15.4381 26.8269C15.604 26.9397 15.8 27.0001 16.0006 27.0001C16.2013 27.0001 16.3973 26.9397 16.5631 26.8269C22.5794 22.7431 28.0688 17.8837 28.0006 11.0506C27.9669 7.75875 25.3556 5 22.0581 5Z"
+                                        stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative md:mt-0 mt-4">
+                        <svg class="absolute top-4 right-4 cursor-pointer" width="36" height="36" viewBox="0 0 36 36"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18" cy="18" r="18" fill="#1E293B" />
+                            <rect width="20" height="20" transform="translate(8 8)" fill="#1E293B" />
+                            <path
+                                d="M11.125 14.875C10.9592 14.875 10.8003 14.9408 10.6831 15.0581C10.5658 15.1753 10.5 15.3342 10.5 15.5V23.9375C10.5 25.1187 11.5063 26.125 12.6875 26.125H23.3125C24.4937 26.125 25.5 25.1676 25.5 23.9863V15.5C25.5 15.3342 25.4342 15.1753 25.3169 15.0581C25.1997 14.9408 25.0408 14.875 24.875 14.875H11.125Z"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 14.875V13.625C14.25 12.6304 14.6451 11.6766 15.3483 10.9733C16.0516 10.2701 17.0054 9.875 18 9.875V9.875C18.9946 9.875 19.9484 10.2701 20.6517 10.9733C21.3549 11.6766 21.75 12.6304 21.75 13.625V14.875"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 16.75V17.375C14.25 18.3696 14.6451 19.3234 15.3483 20.0267C16.0516 20.7299 17.0054 21.125 18 21.125C18.9946 21.125 19.9484 20.7299 20.6517 20.0267C21.3549 19.3234 21.75 18.3696 21.75 17.375V16.75"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                        <div>
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%2019%20%282%29.png"
+                                alt="">
+                        </div>
+                        <div
+                            class="flex justify-between items-center bg-gradient-to-r from-[#000000]/50  to-[#000000]/30 py-2 px-3  ">
+                            <div>
+                                <p class="text-base font-normal  text-white">AirPods Max</p>
+                                <p class="text-base font-normal text-white font-medium">$$470.00</p>
+                            </div>
+                            <div>
+                                <svg class="hover:fill-white cursor-pointer" width="32" height="32" viewBox="0 0 32 32"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0581 5C18.0006 5 16.0006 9 16.0006 9C16.0006 9 14.0006 5 9.94314 5C6.64564 5 4.03439 7.75875 4.00064 11.0506C3.93189 17.8837 9.42126 22.7431 15.4381 26.8269C15.604 26.9397 15.8 27.0001 16.0006 27.0001C16.2013 27.0001 16.3973 26.9397 16.5631 26.8269C22.5794 22.7431 28.0688 17.8837 28.0006 11.0506C27.9669 7.75875 25.3556 5 22.0581 5Z"
+                                        stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:block md:hidden block">
+                <div class="lg:flex justify-center gap-8 md:mt-8 mt-4">
+                    <div class="relative ">
+                        <svg class="absolute top-4 right-4 cursor-pointer" width="36" height="36" viewBox="0 0 36 36"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18" cy="18" r="18" fill="#1E293B" />
+                            <rect width="20" height="20" transform="translate(8 8)" fill="#1E293B" />
+                            <path
+                                d="M11.125 14.875C10.9592 14.875 10.8003 14.9408 10.6831 15.0581C10.5658 15.1753 10.5 15.3342 10.5 15.5V23.9375C10.5 25.1187 11.5063 26.125 12.6875 26.125H23.3125C24.4937 26.125 25.5 25.1676 25.5 23.9863V15.5C25.5 15.3342 25.4342 15.1753 25.3169 15.0581C25.1997 14.9408 25.0408 14.875 24.875 14.875H11.125Z"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 14.875V13.625C14.25 12.6304 14.6451 11.6766 15.3483 10.9733C16.0516 10.2701 17.0054 9.875 18 9.875V9.875C18.9946 9.875 19.9484 10.2701 20.6517 10.9733C21.3549 11.6766 21.75 12.6304 21.75 13.625V14.875"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 16.75V17.375C14.25 18.3696 14.6451 19.3234 15.3483 20.0267C16.0516 20.7299 17.0054 21.125 18 21.125C18.9946 21.125 19.9484 20.7299 20.6517 20.0267C21.3549 19.3234 21.75 18.3696 21.75 17.375V16.75"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                        <div>
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%2021%20%281%29.png"
+                                alt="">
+                        </div>
+                        <div
+                            class="flex justify-between items-center bg-gradient-to-r from-[#000000]/50  to-[#000000]/30 py-2 px-3  ">
+                            <div>
+                                <p class="text-base font-normal  text-white">Earphone</p>
+                                <p class="text-base font-normal text-white font-medium">$24.99</p>
+                            </div>
+                            <div>
+                                <svg class="hover:fill-white cursor-pointer" width="32" height="32" viewBox="0 0 32 32"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0581 5C18.0006 5 16.0006 9 16.0006 9C16.0006 9 14.0006 5 9.94314 5C6.64564 5 4.03439 7.75875 4.00064 11.0506C3.93189 17.8837 9.42126 22.7431 15.4381 26.8269C15.604 26.9397 15.8 27.0001 16.0006 27.0001C16.2013 27.0001 16.3973 26.9397 16.5631 26.8269C22.5794 22.7431 28.0688 17.8837 28.0006 11.0506C27.9669 7.75875 25.3556 5 22.0581 5Z"
+                                        stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative md:mt-0 mt-4">
+                        <svg class="absolute top-4 right-4 cursor-pointer" width="36" height="36" viewBox="0 0 36 36"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18" cy="18" r="18" fill="#1E293B" />
+                            <rect width="20" height="20" transform="translate(8 8)" fill="#1E293B" />
+                            <path
+                                d="M11.125 14.875C10.9592 14.875 10.8003 14.9408 10.6831 15.0581C10.5658 15.1753 10.5 15.3342 10.5 15.5V23.9375C10.5 25.1187 11.5063 26.125 12.6875 26.125H23.3125C24.4937 26.125 25.5 25.1676 25.5 23.9863V15.5C25.5 15.3342 25.4342 15.1753 25.3169 15.0581C25.1997 14.9408 25.0408 14.875 24.875 14.875H11.125Z"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 14.875V13.625C14.25 12.6304 14.6451 11.6766 15.3483 10.9733C16.0516 10.2701 17.0054 9.875 18 9.875V9.875C18.9946 9.875 19.9484 10.2701 20.6517 10.9733C21.3549 11.6766 21.75 12.6304 21.75 13.625V14.875"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 16.75V17.375C14.25 18.3696 14.6451 19.3234 15.3483 20.0267C16.0516 20.7299 17.0054 21.125 18 21.125C18.9946 21.125 19.9484 20.7299 20.6517 20.0267C21.3549 19.3234 21.75 18.3696 21.75 17.375V16.75"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                        <div>
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%2020%20%281%29.png"
+                                alt="">
+                        </div>
+                        <div
+                            class="flex justify-between items-center bg-gradient-to-r from-[#000000]/50  to-[#000000]/30 py-2 px-3  ">
+                            <div>
+                                <p class="text-base font-normal  text-white">Controller</p>
+                                <p class="text-base font-normal text-white font-medium">$350.00</p>
+                            </div>
+                            <div>
+                                <svg class="hover:fill-white cursor-pointer" width="32" height="32" viewBox="0 0 32 32"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0581 5C18.0006 5 16.0006 9 16.0006 9C16.0006 9 14.0006 5 9.94314 5C6.64564 5 4.03439 7.75875 4.00064 11.0506C3.93189 17.8837 9.42126 22.7431 15.4381 26.8269C15.604 26.9397 15.8 27.0001 16.0006 27.0001C16.2013 27.0001 16.3973 26.9397 16.5631 26.8269C22.5794 22.7431 28.0688 17.8837 28.0006 11.0506C27.9669 7.75875 25.3556 5 22.0581 5Z"
+                                        stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative md:mt-0 mt-4">
+                        <svg class="absolute top-4 right-4 cursor-pointer" width="36" height="36" viewBox="0 0 36 36"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18" cy="18" r="18" fill="#1E293B" />
+                            <rect width="20" height="20" transform="translate(8 8)" fill="#1E293B" />
+                            <path
+                                d="M11.125 14.875C10.9592 14.875 10.8003 14.9408 10.6831 15.0581C10.5658 15.1753 10.5 15.3342 10.5 15.5V23.9375C10.5 25.1187 11.5063 26.125 12.6875 26.125H23.3125C24.4937 26.125 25.5 25.1676 25.5 23.9863V15.5C25.5 15.3342 25.4342 15.1753 25.3169 15.0581C25.1997 14.9408 25.0408 14.875 24.875 14.875H11.125Z"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 14.875V13.625C14.25 12.6304 14.6451 11.6766 15.3483 10.9733C16.0516 10.2701 17.0054 9.875 18 9.875V9.875C18.9946 9.875 19.9484 10.2701 20.6517 10.9733C21.3549 11.6766 21.75 12.6304 21.75 13.625V14.875"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 16.75V17.375C14.25 18.3696 14.6451 19.3234 15.3483 20.0267C16.0516 20.7299 17.0054 21.125 18 21.125C18.9946 21.125 19.9484 20.7299 20.6517 20.0267C21.3549 19.3234 21.75 18.3696 21.75 17.375V16.75"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                        <div>
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%2019%20%283%29.png"
+                                alt="">
+                        </div>
+                        <div
+                            class="flex justify-between items-center bg-gradient-to-r from-[#000000]/50  to-[#000000]/30 py-2 px-3  ">
+                            <div>
+                                <p class="text-base font-normal  text-white">Keyboard</p>
+                                <p class="text-base font-normal text-white font-medium">$6.99</p>
+                            </div>
+                            <div>
+                                <svg class="hover:fill-white cursor-pointer" width="32" height="32" viewBox="0 0 32 32"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0581 5C18.0006 5 16.0006 9 16.0006 9C16.0006 9 14.0006 5 9.94314 5C6.64564 5 4.03439 7.75875 4.00064 11.0506C3.93189 17.8837 9.42126 22.7431 15.4381 26.8269C15.604 26.9397 15.8 27.0001 16.0006 27.0001C16.2013 27.0001 16.3973 26.9397 16.5631 26.8269C22.5794 22.7431 28.0688 17.8837 28.0006 11.0506C27.9669 7.75875 25.3556 5 22.0581 5Z"
+                                        stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:hidden md:block hidden mt-6">
+                <div class="flex justify-center gap-6">
+                    <div class="relative">
+                        <svg class="absolute top-4 right-4 cursor-pointer" width="36" height="36" viewBox="0 0 36 36"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18" cy="18" r="18" fill="#1E293B" />
+                            <rect width="20" height="20" transform="translate(8 8)" fill="#1E293B" />
+                            <path
+                                d="M11.125 14.875C10.9592 14.875 10.8003 14.9408 10.6831 15.0581C10.5658 15.1753 10.5 15.3342 10.5 15.5V23.9375C10.5 25.1187 11.5063 26.125 12.6875 26.125H23.3125C24.4937 26.125 25.5 25.1676 25.5 23.9863V15.5C25.5 15.3342 25.4342 15.1753 25.3169 15.0581C25.1997 14.9408 25.0408 14.875 24.875 14.875H11.125Z"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 14.875V13.625C14.25 12.6304 14.6451 11.6766 15.3483 10.9733C16.0516 10.2701 17.0054 9.875 18 9.875V9.875C18.9946 9.875 19.9484 10.2701 20.6517 10.9733C21.3549 11.6766 21.75 12.6304 21.75 13.625V14.875"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 16.75V17.375C14.25 18.3696 14.6451 19.3234 15.3483 20.0267C16.0516 20.7299 17.0054 21.125 18 21.125C18.9946 21.125 19.9484 20.7299 20.6517 20.0267C21.3549 19.3234 21.75 18.3696 21.75 17.375V16.75"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                        <div>
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%2018%20%282%29.png"
+                                alt="">
+                        </div>
+                        <div
+                            class="flex justify-between items-center bg-gradient-to-r from-[#000000]/50  to-[#000000]/30 py-2 px-3  ">
+                            <div>
+                                <p class="text-base font-normal  text-white">Iphone 13 Pro</p>
+                                <p class="text-base font-normal text-white font-medium">$1,050.00</p>
+                            </div>
+                            <div>
+                                <svg class="hover:fill-white cursor-pointer" width="32" height="32" viewBox="0 0 32 32"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0581 5C18.0006 5 16.0006 9 16.0006 9C16.0006 9 14.0006 5 9.94314 5C6.64564 5 4.03439 7.75875 4.00064 11.0506C3.93189 17.8837 9.42126 22.7431 15.4381 26.8269C15.604 26.9397 15.8 27.0001 16.0006 27.0001C16.2013 27.0001 16.3973 26.9397 16.5631 26.8269C22.5794 22.7431 28.0688 17.8837 28.0006 11.0506C27.9669 7.75875 25.3556 5 22.0581 5Z"
+                                        stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <svg class="absolute top-4 right-4 cursor-pointer" width="36" height="36" viewBox="0 0 36 36"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18" cy="18" r="18" fill="#1E293B" />
+                            <rect width="20" height="20" transform="translate(8 8)" fill="#1E293B" />
+                            <path
+                                d="M11.125 14.875C10.9592 14.875 10.8003 14.9408 10.6831 15.0581C10.5658 15.1753 10.5 15.3342 10.5 15.5V23.9375C10.5 25.1187 11.5063 26.125 12.6875 26.125H23.3125C24.4937 26.125 25.5 25.1676 25.5 23.9863V15.5C25.5 15.3342 25.4342 15.1753 25.3169 15.0581C25.1997 14.9408 25.0408 14.875 24.875 14.875H11.125Z"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 14.875V13.625C14.25 12.6304 14.6451 11.6766 15.3483 10.9733C16.0516 10.2701 17.0054 9.875 18 9.875V9.875C18.9946 9.875 19.9484 10.2701 20.6517 10.9733C21.3549 11.6766 21.75 12.6304 21.75 13.625V14.875"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 16.75V17.375C14.25 18.3696 14.6451 19.3234 15.3483 20.0267C16.0516 20.7299 17.0054 21.125 18 21.125C18.9946 21.125 19.9484 20.7299 20.6517 20.0267C21.3549 19.3234 21.75 18.3696 21.75 17.375V16.75"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                        <div>
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%2017.png" alt="">
+                        </div>
+                        <div
+                            class="flex justify-between items-center bg-gradient-to-r from-[#000000]/50  to-[#000000]/30 py-2 px-3  ">
+                            <div>
+                                <p class="text-base font-normal  text-white">Macbook</p>
+                                <p class="text-base font-normal text-white font-medium">$2,050.00 <span
+                                        class="line-through font-medium">$2,200.00</span> </p>
+                            </div>
+                            <div>
+                                <svg class="hover:fill-white cursor-pointer" width="32" height="32" viewBox="0 0 32 32"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0581 5C18.0006 5 16.0006 9 16.0006 9C16.0006 9 14.0006 5 9.94314 5C6.64564 5 4.03439 7.75875 4.00064 11.0506C3.93189 17.8837 9.42126 22.7431 15.4381 26.8269C15.604 26.9397 15.8 27.0001 16.0006 27.0001C16.2013 27.0001 16.3973 26.9397 16.5631 26.8269C22.5794 22.7431 28.0688 17.8837 28.0006 11.0506C27.9669 7.75875 25.3556 5 22.0581 5Z"
+                                        stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center gap-6 mt-6">
+                    <div class="relative">
+                        <svg class="absolute top-4 right-4 cursor-pointer" width="36" height="36" viewBox="0 0 36 36"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18" cy="18" r="18" fill="#1E293B" />
+                            <rect width="20" height="20" transform="translate(8 8)" fill="#1E293B" />
+                            <path
+                                d="M11.125 14.875C10.9592 14.875 10.8003 14.9408 10.6831 15.0581C10.5658 15.1753 10.5 15.3342 10.5 15.5V23.9375C10.5 25.1187 11.5063 26.125 12.6875 26.125H23.3125C24.4937 26.125 25.5 25.1676 25.5 23.9863V15.5C25.5 15.3342 25.4342 15.1753 25.3169 15.0581C25.1997 14.9408 25.0408 14.875 24.875 14.875H11.125Z"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 14.875V13.625C14.25 12.6304 14.6451 11.6766 15.3483 10.9733C16.0516 10.2701 17.0054 9.875 18 9.875V9.875C18.9946 9.875 19.9484 10.2701 20.6517 10.9733C21.3549 11.6766 21.75 12.6304 21.75 13.625V14.875"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 16.75V17.375C14.25 18.3696 14.6451 19.3234 15.3483 20.0267C16.0516 20.7299 17.0054 21.125 18 21.125C18.9946 21.125 19.9484 20.7299 20.6517 20.0267C21.3549 19.3234 21.75 18.3696 21.75 17.375V16.75"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                        <div>
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%2016%20%282%29.png"
+                                alt="">
+                        </div>
+                        <div
+                            class="flex justify-between items-center bg-gradient-to-r from-[#000000]/50  to-[#000000]/30 py-2 px-3  ">
+                            <div>
+                                <p class="text-base font-normal  text-white">AirPods 3</p>
+                                <p class="text-base font-normal text-white font-medium">$230.00</p>
+                            </div>
+                            <div>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0581 5C18.0006 5 16.0006 9 16.0006 9C16.0006 9 14.0006 5 9.94314 5C6.64564 5 4.03439 7.75875 4.00064 11.0506C3.93189 17.8837 9.42126 22.7431 15.4381 26.8269C15.604 26.9397 15.8 27.0001 16.0006 27.0001C16.2013 27.0001 16.3973 26.9397 16.5631 26.8269C22.5794 22.7431 28.0688 17.8837 28.0006 11.0506C27.9669 7.75875 25.3556 5 22.0581 5Z"
+                                        stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <svg class="absolute top-4 right-4 cursor-pointer" width="36" height="36" viewBox="0 0 36 36"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18" cy="18" r="18" fill="#1E293B" />
+                            <rect width="20" height="20" transform="translate(8 8)" fill="#1E293B" />
+                            <path
+                                d="M11.125 14.875C10.9592 14.875 10.8003 14.9408 10.6831 15.0581C10.5658 15.1753 10.5 15.3342 10.5 15.5V23.9375C10.5 25.1187 11.5063 26.125 12.6875 26.125H23.3125C24.4937 26.125 25.5 25.1676 25.5 23.9863V15.5C25.5 15.3342 25.4342 15.1753 25.3169 15.0581C25.1997 14.9408 25.0408 14.875 24.875 14.875H11.125Z"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 14.875V13.625C14.25 12.6304 14.6451 11.6766 15.3483 10.9733C16.0516 10.2701 17.0054 9.875 18 9.875V9.875C18.9946 9.875 19.9484 10.2701 20.6517 10.9733C21.3549 11.6766 21.75 12.6304 21.75 13.625V14.875"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 16.75V17.375C14.25 18.3696 14.6451 19.3234 15.3483 20.0267C16.0516 20.7299 17.0054 21.125 18 21.125C18.9946 21.125 19.9484 20.7299 20.6517 20.0267C21.3549 19.3234 21.75 18.3696 21.75 17.375V16.75"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                        <div>
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%2021.png" alt="">
+                        </div>
+                        <div
+                            class="flex justify-between items-center bg-gradient-to-r from-[#000000]/50  to-[#000000]/30 py-2 px-3  ">
+                            <div>
+                                <p class="text-base font-normal  text-white">Watch 6</p>
+                                <p class="text-base font-normal text-white font-medium">$300.00 <span
+                                        class="line-through font-medium">$350.00</span> </p>
+                            </div>
+                            <div>
+                                <svg class="hover:fill-white cursor-pointer" width="32" height="32" viewBox="0 0 32 32"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0581 5C18.0006 5 16.0006 9 16.0006 9C16.0006 9 14.0006 5 9.94314 5C6.64564 5 4.03439 7.75875 4.00064 11.0506C3.93189 17.8837 9.42126 22.7431 15.4381 26.8269C15.604 26.9397 15.8 27.0001 16.0006 27.0001C16.2013 27.0001 16.3973 26.9397 16.5631 26.8269C22.5794 22.7431 28.0688 17.8837 28.0006 11.0506C27.9669 7.75875 25.3556 5 22.0581 5Z"
+                                        stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center gap-6 mt-6">
+                    <div class="relative">
+                        <svg class="absolute top-4 right-4 cursor-pointer" width="36" height="36" viewBox="0 0 36 36"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18" cy="18" r="18" fill="#1E293B" />
+                            <rect width="20" height="20" transform="translate(8 8)" fill="#1E293B" />
+                            <path
+                                d="M11.125 14.875C10.9592 14.875 10.8003 14.9408 10.6831 15.0581C10.5658 15.1753 10.5 15.3342 10.5 15.5V23.9375C10.5 25.1187 11.5063 26.125 12.6875 26.125H23.3125C24.4937 26.125 25.5 25.1676 25.5 23.9863V15.5C25.5 15.3342 25.4342 15.1753 25.3169 15.0581C25.1997 14.9408 25.0408 14.875 24.875 14.875H11.125Z"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 14.875V13.625C14.25 12.6304 14.6451 11.6766 15.3483 10.9733C16.0516 10.2701 17.0054 9.875 18 9.875V9.875C18.9946 9.875 19.9484 10.2701 20.6517 10.9733C21.3549 11.6766 21.75 12.6304 21.75 13.625V14.875"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 16.75V17.375C14.25 18.3696 14.6451 19.3234 15.3483 20.0267C16.0516 20.7299 17.0054 21.125 18 21.125C18.9946 21.125 19.9484 20.7299 20.6517 20.0267C21.3549 19.3234 21.75 18.3696 21.75 17.375V16.75"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                        <div>
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%2020%20%282%29.png"
+                                alt="">
+                        </div>
+                        <div
+                            class="flex justify-between items-center bg-gradient-to-r from-[#000000]/50  to-[#000000]/30 py-2 px-3  ">
+                            <div>
+                                <p class="text-base font-normal  text-white">Iphone X</p>
+                                <p class="text-base font-normal text-white font-medium">$750.00</p>
+                            </div>
+                            <div>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0581 5C18.0006 5 16.0006 9 16.0006 9C16.0006 9 14.0006 5 9.94314 5C6.64564 5 4.03439 7.75875 4.00064 11.0506C3.93189 17.8837 9.42126 22.7431 15.4381 26.8269C15.604 26.9397 15.8 27.0001 16.0006 27.0001C16.2013 27.0001 16.3973 26.9397 16.5631 26.8269C22.5794 22.7431 28.0688 17.8837 28.0006 11.0506C27.9669 7.75875 25.3556 5 22.0581 5Z"
+                                        stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <svg class="absolute top-4 right-4 cursor-pointer" width="36" height="36" viewBox="0 0 36 36"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18" cy="18" r="18" fill="#1E293B" />
+                            <rect width="20" height="20" transform="translate(8 8)" fill="#1E293B" />
+                            <path
+                                d="M11.125 14.875C10.9592 14.875 10.8003 14.9408 10.6831 15.0581C10.5658 15.1753 10.5 15.3342 10.5 15.5V23.9375C10.5 25.1187 11.5063 26.125 12.6875 26.125H23.3125C24.4937 26.125 25.5 25.1676 25.5 23.9863V15.5C25.5 15.3342 25.4342 15.1753 25.3169 15.0581C25.1997 14.9408 25.0408 14.875 24.875 14.875H11.125Z"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 14.875V13.625C14.25 12.6304 14.6451 11.6766 15.3483 10.9733C16.0516 10.2701 17.0054 9.875 18 9.875V9.875C18.9946 9.875 19.9484 10.2701 20.6517 10.9733C21.3549 11.6766 21.75 12.6304 21.75 13.625V14.875"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 16.75V17.375C14.25 18.3696 14.6451 19.3234 15.3483 20.0267C16.0516 20.7299 17.0054 21.125 18 21.125C18.9946 21.125 19.9484 20.7299 20.6517 20.0267C21.3549 19.3234 21.75 18.3696 21.75 17.375V16.75"
+                                stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                        <div>
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Rectangle%2019%20%282%29.png"
+                                alt="">
+                        </div>
+                        <div
+                            class="flex justify-between items-center bg-gradient-to-r from-[#000000]/50  to-[#000000]/30 py-2 px-3  ">
+                            <div>
+                                <p class="text-base font-normal  text-white">AirPods Max</p>
+                                <p class="text-base font-normal text-white font-medium">$$470.00</p>
+                            </div>
+                            <div>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.0581 5C18.0006 5 16.0006 9 16.0006 9C16.0006 9 14.0006 5 9.94314 5C6.64564 5 4.03439 7.75875 4.00064 11.0506C3.93189 17.8837 9.42126 22.7431 15.4381 26.8269C15.604 26.9397 15.8 27.0001 16.0006 27.0001C16.2013 27.0001 16.3973 26.9397 16.5631 26.8269C22.5794 22.7431 28.0688 17.8837 28.0006 11.0506C27.9669 7.75875 25.3556 5 22.0581 5Z"
+                                        stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative max-w-[335px] w-full mt-6">
+                    <svg class="absolute top-4 right-4 cursor-pointer" width="36" height="36" viewBox="0 0 36 36"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="18" cy="18" r="18" fill="#1E293B" />
+                        <rect width="20" height="20" transform="translate(8 8)" fill="#1E293B" />
+                        <path
+                            d="M11.125 14.875C10.9592 14.875 10.8003 14.9408 10.6831 15.0581C10.5658 15.1753 10.5 15.3342 10.5 15.5V23.9375C10.5 25.1187 11.5063 26.125 12.6875 26.125H23.3125C24.4937 26.125 25.5 25.1676 25.5 23.9863V15.5C25.5 15.3342 25.4342 15.1753 25.3169 15.0581C25.1997 14.9408 25.0408 14.875 24.875 14.875H11.125Z"
+                            stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M14.25 14.875V13.625C14.25 12.6304 14.6451 11.6766 15.3483 10.9733C16.0516 10.2701 17.0054 9.875 18 9.875V9.875C18.9946 9.875 19.9484 10.2701 20.6517 10.9733C21.3549 11.6766 21.75 12.6304 21.75 13.625V14.875"
+                            stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M14.25 16.75V17.375C14.25 18.3696 14.6451 19.3234 15.3483 20.0267C16.0516 20.7299 17.0054 21.125 18 21.125C18.9946 21.125 19.9484 20.7299 20.6517 20.0267C21.3549 19.3234 21.75 18.3696 21.75 17.375V16.75"
+                            stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+
+                    <div>
+                        <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/keyboarf.png" alt="">
+                    </div>
+                    <div
+                        class="flex justify-between items-center bg-gradient-to-r from-[#000000]/50  to-[#000000]/30 py-2 px-3  ">
+                        <div>
+                            <p class="text-base font-normal  text-white">Keyboard</p>
+                            <p class="text-base font-normal text-white font-medium">$6.99</p>
+                        </div>
+                        <div>
+                            <svg class="hover:fill-white cursor-pointer" width="32" height="32" viewBox="0 0 32 32"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22.0581 5C18.0006 5 16.0006 9 16.0006 9C16.0006 9 14.0006 5 9.94314 5C6.64564 5 4.03439 7.75875 4.00064 11.0506C3.93189 17.8837 9.42126 22.7431 15.4381 26.8269C15.604 26.9397 15.8 27.0001 16.0006 27.0001C16.2013 27.0001 16.3973 26.9397 16.5631 26.8269C22.5794 22.7431 28.0688 17.8837 28.0006 11.0506C27.9669 7.75875 25.3556 5 22.0581 5Z"
+                                    stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-2xl italic font-mediumitalic leading-normal text-gray-800 lg:mt-10 md:mt-8 mt-6 text-center">
+                Scroll down to see more products !!!</p>
+
+        </div>
+    </div>
+    <div>
+        <footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-900">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0">
+                    
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Vbazar</span>
+                </a>
+                <ul class="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6 ">Licensing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 3 <a href="https://flowbite.com/" class="hover:underline">Vbazar™</a>. All Rights Reserved.
+            </span>
+        </footer>
+    </div>
+
+
+
+    <!-- show Product start -->
+
+<!-- Script for element -->
+   <script>
+    show = (id) => {
+    document.getElementById(id).classList.toggle("hidden")
+}
+
+handleDropdown = (e) => {
+let svg = e.children[1];
+let mainText = e.children[0];
+svg.classList.toggle('rotate-180')
+let dropdown = e.parentElement.children[1];
+dropdown.classList.toggle('hidden');
+let list = e.parentElement.children[1].children;
+for(i=0 ; i < list.length; i++){
+  let menu = list[i];
+  menu.addEventListener('click', () => {
+      let innertext = menu.innerHTML
+      mainText.innerHTML = innertext
+      dropdown.classList.add('hidden');
+      svg.classList.remove('rotate-180')
+  })
+} 
+};
+   </script>
+</body>
+</html>
