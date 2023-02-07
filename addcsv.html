@@ -5,16 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar</title>
+    <title>product by csv</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-
 <body>
-
-
-
-
     <!-- Navbar start -->
     <nav>
         <div class="sm:hidden sm:bg-gray-200  w-11/12 mx-auto rounded">
@@ -51,13 +46,8 @@
     </nav>
     <!-- Navbar end -->
 
-
-
-
-
-
-    <div class="flex flex-row">
-        <!-- sidebars start -->
+    <!-- sidebar start -->
+    <div class="flex lg:flex-row sm\:flex-col">
         <div class="max-w-2xl   top-12">
             <aside class="w-64 min-h-screen" aria-label="Sidebar">
                 <div class="px-3 py-4 overflow-y-auto rounded bg-gray-200 dark:bg-gray-800  min-h-screen ">
@@ -262,125 +252,48 @@
             </aside>
             <script src="https://unpkg.com/flowbite@1.3.4/dist/flowbite.js"></script>
         </div>
-        <!-- Sidebar end -->
-
-
-        <!-- table start -->
-
+        <!-- sidebar end -->
         <div class=" overflow-x-auto w-full">
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                    <tr>
-                        <th scope="col" class="px-6 py-3">
-                            Product name
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Color
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Category
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Price
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Price
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Price
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Price
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Apple MacBook Pro 17"
-                        </th>
-                        <td class="px-6 py-4">
-                            Sliver
-                        </td>
-                        <td class="px-6 py-4">
-                            Laptop
-                        </td>
-                        <td class="px-6 py-4">
-                            $2999
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Microsoft Surface Pro
-                        </th>
-                        <td class="px-6 py-4">
-                            White
-                        </td>
-                        <td class="px-6 py-4">
-                            Laptop PC
-                        </td>
-                        <td class="px-6 py-4">
-                            $1999
-                        </td>
-                    </tr>
-                    <tr class="bg-white dark:bg-gray-800">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Magic Mouse 2
-                        </th>
-                        <td class="px-6 py-4">
-                            Black
-                        </td>
-                        <td class="px-6 py-4">
-                            Accessories
-                        </td>
-                        <td class="px-6 py-4">
-                            $99
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="flex lg:flex-row flex-col items-center py-8 px-4 justify-between w-full flex-wrap">
+                <!-- Code block starts -->
+                <div class="flex flex-col lg:mr-16">
+                    <label for="email"
+                        class="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2">Email</label>
+                    <input id="email" autocomplete="off"
+                        class="text-gray-600 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"
+                        placeholder="Placeholder" />
+                </div>
+                <!-- Code block ends -->
+                <div class="flex flex-col lg:mr-16">
+                    <label for="date"
+                        class="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2">Date</label>
+                    <input id="date" autocomplete="off" type="date"
+                        class="text-gray-600 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"
+                        placeholder="Placeholder" />
+                </div>
+                <!-- Code block starts -->
+
+                <!-- Code block ends -->
+                <!-- Code block starts -->
+                <div class="flex flex-col lg:py-0 py-4">
+                    <label for="price5"
+                        class="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2">Browse
+                        CSV</label>
+                    <div class="relative">
+
+                        <input id="price5" type="file" lass="text-white bg-indigo-800 border border-indigo-700 px-6 py-3 rounded font-medium w-60 mt-4 
+                        hover:bg-indigo-700 " />
+                    </div>
+                </div>
+                <!-- Code block ends -->
+                <button type="submit" class="text-white bg-indigo-800 border border-indigo-700 px-6 py-3 rounded font-medium w-60 mt-4 
+        hover:bg-indigo-700 ">
+                    Add
+                </button>
+            </div>
         </div>
 
-        <!-- table end -->
     </div>
-
-    <script>
-        let sideBar = document.getElementById("mobile-nav");
-        let menu = document.getElementById("menu");
-        let cross = document.getElementById("cross");
-        const sidebarHandler = (check) => {
-            console.log(check);
-            if (check) {
-                sideBar.style.transform = "translateX(-0px)";
-                cross.classList.remove("hidden");
-                menu.classList.add("hidden");
-            } else {
-                sideBar.style.transform = "translateX(-100%)";
-
-                cross.classList.add("hidden");
-                menu.classList.remove("hidden");
-            }
-        };
-    </script>
-
-    <!-- Navbar script start -->
-    <script>
-        function activeTab(element) {
-            let siblings = element.parentNode.querySelectorAll("li");
-            for (let item of siblings) {
-                item.classList.add("text-white-600");
-                item.classList.remove("text-white");
-                item.classList.remove("bg-gray-700");
-                item.innerHTML = "Inactive";
-            }
-            element.classList.remove("text-gray-600");
-            element.classList.add("bg-gray-700");
-            element.classList.add("text-white");
-            element.innerHTML = "Active";
-        }
-    </script>
-    <!-- Navbar script end -->
-
 
 </body>
 

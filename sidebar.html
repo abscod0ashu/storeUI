@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Products</title>
+    <title>Side bar</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
@@ -16,7 +16,7 @@
 
 
     <!-- Navbar start -->
-    <div class="sm:hidden sm:bg-gray-200 relative w-11/12 mx-auto rounded">
+    <div class="sm:hidden sm:bg-gray-200  w-11/12 mx-auto rounded">
         <div class="absolute inset-0 m-auto mr-4 z-0 w-6 h-6">
             <img class="icon icon-tabler icon-tabler-selector"
                 src="https://tuk-cdn.s3.amazonaws.com/can-uploader/gray-bg-active-white-svg1.svg" alt="selector" />
@@ -30,9 +30,9 @@
             <option class="text-sm text-gray-600">inactive</option>
         </select>
     </div>
-    <div class="justify-between flex-wrap hidden sm:block" style="position:absolute; right:0; width:100%; z-index:-1;">
+    <div class="justify-between flex-wrap hidden sm:block">
         <div class="xl:w-full xl:mx-0 rounded bg-gray-200 dark:bg-gray-800 h-12 shadow">
-            <ul class="flex items-center h-full">
+            <ul class="flex items-center flex-row-reverse h-full">
                 <li onclick="activeTab(this)" onkeypress="activeTab(this)" tabindex="0"
                     class="focus:outline-none dark:text-white dark:hover:text-white focus:text-white text-sm text-white flex items-center h-full px-5 bg-gray-700 py-4 rounded-md mr-10 font-normal cursor-pointer">
                     Active</li>
@@ -54,7 +54,7 @@
 
 
     <!-- Sidebar start -->
-    <div class="max-w-2xl mx-auto absolute top-12">
+    <div class="max-w-2xl  top-12">
         <aside class="w-64 min-h-screen" aria-label="Sidebar">
             <div class="px-3 py-4 overflow-y-auto rounded bg-gray-200 dark:bg-gray-800  min-h-screen ">
                 <ul class="space-y-2">
@@ -99,7 +99,7 @@
                                     Product</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="/importproductcsv.html"
                                     class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Import
                                     product</a>
                             </li>
@@ -135,7 +135,7 @@
                                     sales</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="attachmentform.html"
                                     class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Add
                                     sales</a>
                             </li>
@@ -161,17 +161,17 @@
                         </button>
                         <ul id="dropdown3" class="hidden py-2 space-y-2">
                             <li>
-                                <a href="#"
+                                <a href="/listpurchases.html"
                                     class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">List
                                     Purchases</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="/attachmentform.html"
                                     class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Add
                                     Purchases</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="addcsv.html"
                                     class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Add
                                     purchases by CSV</a>
                             </li>
@@ -197,17 +197,17 @@
                         </button>
                         <ul id="dropdown5" class="hidden py-2 space-y-2">
                             <li>
-                                <a href="#"
+                                <a href="/listuser.html"
                                     class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">List
                                     user</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="signup.html"
                                     class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Add
                                     user</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="listuser.html"
                                     class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">List
                                     biller</a>
                             </li>
@@ -233,12 +233,12 @@
                         </button>
                         <ul id="dropdown4" class="hidden py-2 space-y-2">
                             <li>
-                                <a href="#"
+                                <a href="/listsale.html"
                                     class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">List
                                     Transfer</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="/attachmentform.html"
                                     class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Add
                                     Transfer</a>
                             </li>
