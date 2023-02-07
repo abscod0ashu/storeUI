@@ -10,6 +10,41 @@
 </head>
 
 <body>
+    <!-- Navbar start-->
+    <nav>
+        <div class="sm:hidden sm:bg-gray-200  w-11/12 mx-auto rounded">
+            <div class="absolute inset-0 m-auto mr-4 z-0 w-6 h-6">
+                <img class="icon icon-tabler icon-tabler-selector"
+                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/gray-bg-active-white-svg1.svg" alt="selector" />
+            </div>
+            <select aria-label="Selected tab"
+                class="form-select dark:text-white block w-full p-3 border border-gray-300 rounded text-gray-600 appearance-none bg-transparent relative z-10">
+                <option class="text-sm text-gray-600">inactive</option>
+                <option class="text-sm text-gray-600">inactive</option>
+                <option selected class="text-sm text-gray-600">Active</option>
+                <option class="text-sm text-gray-600">inactive</option>
+                <option class="text-sm text-gray-600">inactive</option>
+            </select>
+        </div>
+        <div class="justify-between flex-wrap hidden sm:block">
+            <div class="xl:w-full xl:mx-0 rounded bg-gray-200 dark:bg-gray-800 h-12 shadow">
+                <ul class="flex items-center h-full">
+                    <li onclick="activeTab(this)" onkeypress="activeTab(this)" tabindex="0"
+                        class="focus:outline-none dark:text-white dark:hover:text-white focus:text-white text-sm text-white flex items-center h-full px-5 bg-gray-700 py-4 rounded-md mr-10 font-normal cursor-pointer">
+                        Active</li>
+                    <li onclick="activeTab(this)" onkeypress="activeTab(this)" tabindex="0"
+                        class="focus:outline-none dark:text-white dark:hover:text-white focus:text-white text-sm text-gray-600 h-full flex items-center py-4 px-5 mr-10 rounded font-normal hover:text-gray-700 cursor-pointer">
+                        inactive</li>
+                    <li onclick="activeTab(this)" onkeypress="activeTab(this)" tabindex="0"
+                        class="focus:outline-none dark:text-white dark:hover:text-white focus:text-white text-sm text-gray-600 h-full flex items-center py-4 px-5 mr-10 rounded font-normal hover:text-gray-700 cursor-pointer">
+                        inactive</li>
+                    <li onclick="activeTab(this)" onkeypress="activeTab(this)" tabindex="0"
+                        class="focus:outline-none dark:text-white dark:hover:text-white focus:text-white text-sm text-gray-600 h-full flex items-center py-4 px-5 mr-10 rounded font-normal hover:text-gray-700 cursor-pointer">
+                        inacti
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar end -->
     <div class="bg-gray-500 w-full h-screen flex flex-row">
         <div class="bg-gray-300  w-1/3 h-full">
             <div class="border-solid border-2 border-sky-500 h-full bg-black-399">
@@ -136,7 +171,7 @@
                         class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border border-gray-700 rounded absolute bottom-2 left-4">
                         Cancel
                     </button>
-                    <button
+                    <button onclick="modalHandler(true)"
                         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded absolute bottom-2 left-28">
                         Payment </button>
                 </div>
@@ -145,10 +180,85 @@
 
         </div>
 
-        <div class="bg-gray-400 w-2/3 h-full">
-            <div class="flex flex-col justify-center items-center w-full py-8">
+        <!-- modal start -->
+        <div class="py-12 bg-gray-700 dark:bg-gray-900 transition duration-150 ease-in-out z-10 absolute top-0 right-0 bottom-0 left-0"
+            id="modal">
+            <div role="alert" class="container mx-auto w-11/12 md:w-2/3 max-w-lg">
+                <div
+                    class="relative py-8 px-5 md:px-10 bg-white dark:bg-gray-800 dark:border-gray-700 shadow-md rounded border border-gray-400">
+                    <div class="w-full flex justify-start text-gray-600 mb-3">
+                        <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left_aligned_form-svg1.svg"
+                            alt="icon" />
 
-                <div class="flex w-full my-12 px-4 md:px-6 lg:px-10 xl:px-20  justify-start items-start ">
+                    </div>
+                    <h1 class="text-gray-800 dark:text-white  font-lg font-bold tracking-normal leading-tight mb-4">
+                        Enter
+                        Billing Details</h1>
+                    <label for="name"
+                        class="text-gray-800 dark:text-white  text-sm font-bold leading-tight tracking-normal">Owner
+                        Name</label>
+                    <input id="name"
+                        class="mb-5 mt-2 text-gray-600 dark:bg-gray-900 dark:text-white dark:placeholder-gray-200 dark:border-gray-700 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
+                        placeholder="James" />
+                    <label for="email2"
+                        class="text-gray-800 dark:text-white  text-sm font-bold leading-tight tracking-normal">Card
+                        Number</label>
+                    <div class="relative mb-5 mt-2">
+                        <div class="absolute text-gray-600 flex items-center px-4 dark:border-gray-700 border-r h-full">
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left_aligned_form-svg2.svg"
+                                alt="icon" />
+
+                        </div>
+                        <input id="email2"
+                            class="text-gray-600 dark:bg-gray-900 dark:text-white dark:placeholder-gray-200 dark:border-gray-700 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-16 text-sm border-gray-300 rounded border"
+                            placeholder="XXXX - XXXX - XXXX - XXXX" />
+                    </div>
+                    <label for="expiry"
+                        class="text-gray-800 dark:text-white  text-sm font-bold leading-tight tracking-normal">Expiry
+                        Date</label>
+                    <div class="relative mb-5 mt-2">
+                        <div class="absolute right-0 text-gray-600 flex items-center pr-3 h-full cursor-pointer">
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left_aligned_form-svg3.svg"
+                                alt="icon" />
+
+                        </div>
+                        <input id="expiry"
+                            class="text-gray-600 dark:bg-gray-900 dark:text-white dark:placeholder-gray-200 dark:border-gray-700 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
+                            placeholder="MM/YY" />
+                    </div>
+                    <label for="cvc"
+                        class="text-gray-800 dark:text-white  text-sm font-bold leading-tight tracking-normal">CVC</label>
+                    <div class="relative mb-5 mt-2">
+                        <div class="absolute right-0 text-gray-600 flex items-center pr-3 h-full cursor-pointer">
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left_aligned_form-svg4.svg"
+                                alt="icon" />
+
+                        </div>
+                        <input id="cvc"
+                            class="mb-8 text-gray-600 dark:bg-gray-900 dark:text-white dark:placeholder-gray-200 dark:border-gray-700 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
+                            placeholder="MM/YY" />
+                    </div>
+                    <div class="flex items-center justify-start w-full">
+                        <button
+                            class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-8 py-2 text-sm">Submit</button>
+                        <button
+                            class="focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-gray-400 ml-3 bg-gray-100 transition duration-150 text-gray-600 ease-in-out hover:border-gray-400 hover:bg-gray-300 border rounded px-8 py-2 text-sm"
+                            onclick="modalHandler()">Cancel</button>
+                    </div>
+                    <button
+                        class="cursor-pointer absolute top-0 right-0 mt-4 mr-5 text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out rounded focus:ring-2 focus:outline-none focus:ring-gray-600"
+                        onclick="modalHandler()" aria-label="close modal" role="button" style="font-size: 50px;">
+                        *
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- modal end -->
+
+        <div class="bg-gray-400 w-2/3 h-full">
+            <div class="flex flex-col justify-center items-center w-full ">
+
+                <div class="flex w-full my-10 px-4 md:px-6 lg:px-10 xl:px-20  justify-start items-start ">
                     <div class="flex w-full space-y-6 justify-start items-start flex-col ">
                         <div class="w-full relative flex justify-start lg:space-x-20 xl:space-x-32">
                             <div class="w-full">
@@ -156,7 +266,7 @@
                                 <div
                                     class="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 2xl:grid-cols-4 justify-items-start items-start gap-4 md:gap-x-6 lg:gap-x-8 gap-y-6">
                                     <div class="flex justify-center space-y-3 items-center flex-col">
-                                        <div class="hover:shadow-md cursor-pointer transition duration-200 w-full">
+                                        <div class="hover:shadow-md cursor-pointer transition duration-200 w-24">
                                             <img src="https://i.ibb.co/CMFdmWp/image.png" alt="flower">
                                         </div>
                                         <div class="flex flex-col space-y-2">
@@ -169,7 +279,7 @@
                                         </div>
                                     </div>
                                     <div class="flex justify-center space-y-3 items-center flex-col">
-                                        <div class="hover:shadow-md cursor-pointer transition duration-200 w-full">
+                                        <div class="hover:shadow-md cursor-pointer transition duration-200 w-24">
                                             <img src="https://i.ibb.co/6v9c2DD/1.png" alt="">
                                         </div>
                                         <div class="flex flex-col space-y-2">
@@ -182,7 +292,7 @@
                                         </div>
                                     </div>
                                     <div class="flex justify-center space-y-3 items-center flex-col">
-                                        <div class="hover:shadow-md cursor-pointer transition duration-200 w-full">
+                                        <div class="hover:shadow-md cursor-pointer transition duration-200 w-24">
                                             <img src="https://i.ibb.co/9TN2ZJb/2.png" alt="">
                                         </div>
                                         <div class="flex flex-col space-y-2">
@@ -195,7 +305,7 @@
                                         </div>
                                     </div>
                                     <div class="flex justify-center space-y-3 items-center flex-col">
-                                        <div class="hover:shadow-md cursor-pointer transition duration-200 w-full">
+                                        <div class="hover:shadow-md cursor-pointer transition duration-200 w-24">
                                             <img src="https://i.ibb.co/fF8tWzC/3.png" alt="">
                                         </div>
                                         <div class="flex flex-col space-y-2">
@@ -208,7 +318,7 @@
                                         </div>
                                     </div>
                                     <div class="flex justify-center space-y-3 items-center flex-col">
-                                        <div class="hover:shadow-md cursor-pointer transition duration-200 w-full">
+                                        <div class="hover:shadow-md cursor-pointer transition duration-200 w-24">
                                             <img src="https://i.ibb.co/r5znmnB/4.png" alt="">
                                         </div>
                                         <div class="flex flex-col space-y-2">
@@ -221,7 +331,7 @@
                                         </div>
                                     </div>
                                     <div class="flex justify-center space-y-3 items-center flex-col">
-                                        <div class="hover:shadow-md cursor-pointer transition duration-200 w-full">
+                                        <div class="hover:shadow-md cursor-pointer transition duration-200 w-24">
                                             <img src="https://i.ibb.co/xJ4WskP/5.png" alt="">
                                         </div>
                                         <div class="flex flex-col space-y-2">
@@ -234,7 +344,7 @@
                                         </div>
                                     </div>
                                     <div class="flex justify-center space-y-3 items-center flex-col">
-                                        <div class="hover:shadow-md cursor-pointer transition duration-200 w-full">
+                                        <div class="hover:shadow-md cursor-pointer transition duration-200 w-24">
                                             <img src="https://i.ibb.co/84DthWx/6.png" alt="">
                                         </div>
                                         <div class="flex flex-col space-y-2">
@@ -247,7 +357,7 @@
                                         </div>
                                     </div>
                                     <div class="flex justify-center space-y-3 items-center flex-col">
-                                        <div class="hover:shadow-md cursor-pointer transition duration-200 w-full">
+                                        <div class="hover:shadow-md cursor-pointer transition duration-200 w-24">
                                             <img src="https://i.ibb.co/zQ9r8z6/7.png" alt="">
                                         </div>
                                         <div class="flex flex-col space-y-2">
@@ -269,16 +379,7 @@
         </div>
     </div>
 
-    <!-- product cards start -->
 
-
-
-
-
-
-
-
-    <!-- product cards end -->
 
 
 
@@ -349,6 +450,59 @@
                 .classList.toggle("hidden");
         }
     </script>
+
+    <!-- modal script -->
+    <script>
+        let modal = document.getElementById("modal");
+        function modalHandler(val) {
+            if (val) {
+                fadeIn(modal);
+            } else {
+                fadeOut(modal);
+            }
+        }
+        function fadeOut(el) {
+            el.style.opacity = 1;
+            (function fade() {
+                if ((el.style.opacity -= 0.1) < 0) {
+                    el.style.display = "none";
+                } else {
+                    requestAnimationFrame(fade);
+                }
+            })();
+        }
+        function fadeIn(el, display) {
+            el.style.opacity = 0;
+            el.style.display = display || "flex";
+            (function fade() {
+                let val = parseFloat(el.style.opacity);
+                if (!((val += 0.2) > 1)) {
+                    el.style.opacity = val;
+                    requestAnimationFrame(fade);
+                }
+            })();
+        }
+    </script>
+    <!-- navbar script -->
+    <script>
+        function activeTab(element) {
+            let siblings = element.parentNode.querySelectorAll("li");
+            for (let item of siblings) {
+                item.classList.add("text-white-600");
+                item.classList.remove("text-white");
+                item.classList.remove("bg-gray-700");
+                // item.innerHTML = "Inactive";
+            }
+            element.classList.remove("text-gray-600");
+            element.classList.add("bg-gray-700");
+            element.classList.add("text-white");
+            // element.innerHTML = "Active";
+        }
+    </script>
+
+    <!-- navbar end -->
+
+
 </body>
 
 </html>

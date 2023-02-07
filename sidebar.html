@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar</title>
+    <title>Add Products</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
@@ -30,7 +30,7 @@
             <option class="text-sm text-gray-600">inactive</option>
         </select>
     </div>
-    <div class="justify-between flex-wrap hidden sm:block" style="position:absolute; right:0; width:80%; z-index:-1;">
+    <div class="justify-between flex-wrap hidden sm:block" style="position:absolute; right:0; width:100%; z-index:-1;">
         <div class="xl:w-full xl:mx-0 rounded bg-gray-200 dark:bg-gray-800 h-12 shadow">
             <ul class="flex items-center h-full">
                 <li onclick="activeTab(this)" onkeypress="activeTab(this)" tabindex="0"
@@ -54,7 +54,7 @@
 
 
     <!-- Sidebar start -->
-    <div class="max-w-2xl mx-auto absolute">
+    <div class="max-w-2xl mx-auto absolute top-12">
         <aside class="w-64 min-h-screen" aria-label="Sidebar">
             <div class="px-3 py-4 overflow-y-auto rounded bg-gray-200 dark:bg-gray-800  min-h-screen ">
                 <ul class="space-y-2">
@@ -94,7 +94,7 @@
                                     product</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="/addProduct.html"
                                     class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Add
                                     Product</a>
                             </li>
@@ -130,7 +130,7 @@
                                     sales</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="/pos.html"
                                     class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">POS
                                     sales</a>
                             </li>
