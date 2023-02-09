@@ -250,7 +250,7 @@
                                         Transfer</a>
                                 </li>
                                 <li>
-                                    <a href="#"
+                                    <a href="/listsale.html"
                                         class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">List
                                         Transfer</a>
                                 </li>
@@ -268,7 +268,7 @@
         <!-- table start -->
 
         <div class=" overflow-x-auto w-full">
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400" id="table">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                         <th scope="col" class="px-6 py-3">
@@ -389,6 +389,45 @@
         }
     </script>
     <!-- Navbar script end -->
+
+    <script>
+        async function fetchValue() {
+            const table = document.getElementById('table')
+            try {
+                const response = await fetch('http://localhost:4000/api/v1/user/getuser/', {
+                    method: "GET"
+                })
+                const data = await response.json();
+                if (data.success) {
+                    const setdata = data.data.user.map((e) => {
+                        var tr = document.createElement('tr');
+                        tr.setAttribute('class', 'bg-white border-b dark:bg-gray-800 dark:border-gray-700');
+                        tr.setAttribute('scope', 'row');
+                        var th = document.createElement('th');
+                        th.setAttribute('class', 'px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white');
+                        var td = document.createElement('td');
+                        td.setAttribute('class', 'px-4 px-6');
+                        var td2 = document.createElement('td');
+                        td2.setAttribute('class', 'px-4 px-6');
+                        th.textContent = e.username
+                        td.textContent = e.email
+                        td2.textContent = e.userRole
+
+                        tr.appendChild(th);
+                        tr.appendChild(td);
+                        tr.appendChild(td2);
+                        table.appendChild(tr)
+
+
+                    })
+                }
+                console.log(data);
+            } catch (error) {
+                console.log(error.message);
+            }
+        }
+        fetchValue();
+    </script>
 
 
 </body>
