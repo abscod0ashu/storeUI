@@ -525,7 +525,7 @@
         product.addEventListener('change', async (e) => {
             body['findvalue'] = e.target.value;
             try {
-                const response = await fetch('http://localhost:4000/api/v1/products/getbycode', {
+                const response = await fetch('https://user-yawg.onrender.com/api/v1/products/getbycode', {
                     method: 'POST',
                     body: JSON.stringify(body),
                     headers: {
