@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All user</title>
+    <title>All Product</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
@@ -272,26 +272,24 @@
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                         <th scope="col" class="px-6 py-3">
-                            User Name
+                            Product Name
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Email
+                            Product code
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Company
+                            Category
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Award point
+                            Product description
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Group
+                            Product Qty
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            status
+                            Product price
                         </th>
-                        <th scope="col" class="px-6 py-3">
-                            Action
-                        </th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -394,12 +392,13 @@
         async function fetchValue() {
             const table = document.getElementById('table')
             try {
-                const response = await fetch('https://user-yawg.onrender.com/api/v1/user/getuser/', {
+                const response = await fetch('https://user-yawg.onrender.com/api/v1/products/allproducts', {
                     method: "GET"
                 })
                 const data = await response.json();
+                console.log(data);
                 if (data.success) {
-                    const setdata = data.data.user.map((e) => {
+                    const setdata = data.data.map((e) => {
                         var tr = document.createElement('tr');
                         tr.setAttribute('class', 'bg-white border-b dark:bg-gray-800 dark:border-gray-700');
                         tr.setAttribute('scope', 'row');
@@ -409,9 +408,9 @@
                         td.setAttribute('class', 'px-4 px-6');
                         var td2 = document.createElement('td');
                         td2.setAttribute('class', 'px-4 px-6');
-                        th.textContent = e.username
-                        td.textContent = e.email
-                        td2.textContent = e.userRole
+                        th.textContent = e.prodName
+                        td.textContent = e.prodCode
+                        td2.textContent = e.prodQty
 
                         tr.appendChild(th);
                         tr.appendChild(td);
