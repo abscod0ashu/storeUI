@@ -366,7 +366,7 @@
     <script>
         const tbody = document.getElementById('tbody');
         async function findall() {
-            const response = await fetch('http://localhost:4000/api/v1/category/getcategory/', {
+            const response = await fetch('https://user-yawg.onrender.com/api/v1/category/getcategory/', {
                 method: 'get'
             })
             const data = await response.json();
